@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini Revuelto — Beyond The Impossible</title>
+    <meta name="description" content="Experience the Lamborghini Revuelto — a cinematic scrollytelling journey through aerodynamics, the hybrid V12 powertrain, and raw performance.">
+    <meta property="og:title" content="Lamborghini Revuelto — Beyond The Impossible">
+    <meta property="og:description" content="A cinematic scrollytelling experience for the Lamborghini Revuelto.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Speed-O-Meter (Scroll Progress) -->
+    <div class="speedometer" id="speedometer">
+        <div class="speed-track">
+            <div class="speed-fill" id="speed-fill"></div>
+        </div>
+        <div class="speed-readout">
+            <span class="speed-value" id="speed-value">0</span>
+            <span class="speed-unit">km/h</span>
+        </div>
+    </div>
+
+    <!-- Section Navigation Dots -->
+    <nav class="section-nav" id="section-nav" aria-label="Section navigation">
+        <button class="nav-dot active" data-section="hero" aria-label="Hero section">
+            <span class="dot-label">01</span>
+        </button>
+        <button class="nav-dot" data-section="aero" aria-label="Aerodynamics section">
+            <span class="dot-label">02</span>
+        </button>
+        <button class="nav-dot" data-section="engine" aria-label="Engine section">
+            <span class="dot-label">03</span>
+        </button>
+        <button class="nav-dot" data-section="performance" aria-label="Performance section">
+            <span class="dot-label">04</span>
+        </button>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: HERO                              -->
+    <!-- ============================================ -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-bg-layer">
+            <img src="assets/hero-car.png" alt="Lamborghini Revuelto front view with glowing headlights" class="hero-car-img" id="hero-car-img">
+        </div>
+        <div class="hero-headlight-layer" id="hero-headlight-layer">
+            <img src="assets/hero-headlights.png" alt="Lamborghini Revuelto headlight close-up" class="hero-headlight-img">
+        </div>
+        <div class="hero-content" id="hero-content">
+            <div class="hero-badge">AUTOMOBILI LAMBORGHINI</div>
+            <h1 class="hero-title" id="hero-title">
+                <span class="title-letter">R</span><span class="title-letter">E</span><span class="title-letter">V</span><span class="title-letter">U</span><span class="title-letter">E</span><span class="title-letter">L</span><span class="title-letter">T</span><span class="title-letter">O</span>
+            </h1>
+            <div class="hero-accent-line" id="hero-accent-line"></div>
+            <p class="hero-tagline" id="hero-tagline">Beyond the impossible</p>
+        </div>
+        <div class="scroll-cue" id="scroll-cue">
+            <span class="scroll-cue-text">SCROLL TO UNLEASH</span>
+            <div class="scroll-cue-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: AERODYNAMICS                      -->
+    <!-- ============================================ -->
+    <section id="aero" class="section aero-section">
+        <div class="aero-bg-pattern"></div>
+        <div class="aero-container">
+            <div class="aero-visual">
+                <img src="assets/aero-side.png" alt="Lamborghini Revuelto aerodynamic profile with airflow visualization" class="aero-car-img" id="aero-car-img">
+                <!-- SVG Airflow Lines -->
+                <svg class="aero-flow-svg" id="aero-flow-svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet">
+                    <path class="flow-line fl-1" d="M0,100 C200,100 300,80 500,120 S800,60 1200,100" />
+                    <path class="flow-line fl-2" d="M0,200 C200,190 400,150 600,200 S900,160 1200,190" />
+                    <path class="flow-line fl-3" d="M0,300 C150,300 350,260 550,300 S850,270 1200,290" />
+                    <path class="flow-line fl-4" d="M0,380 C200,380 400,350 600,380 S900,360 1200,370" />
+                    <path class="flow-line fl-5" d="M0,150 C300,140 500,110 700,160 S1000,120 1200,150" />
+                </svg>
+            </div>
+            <div class="aero-text-block">
+                <span class="section-label">02 — AERODYNAMICS</span>
+                <h2 class="aero-title" id="aero-title">SCULPTED<br>BY AIR</h2>
+                <p class="aero-desc" id="aero-desc">Every curve serves a purpose. Every surface channels the wind. The Revuelto's aerodynamic profile isn't designed — it's discovered, carved by hundreds of hours in the wind tunnel until form and function become one.</p>
+                <div class="aero-stats" id="aero-stats">
+                    <div class="stat-card glass-panel">
+                        <span class="stat-value" data-target="360">0</span>
+                        <span class="stat-suffix">kg</span>
+                        <span class="stat-label">Downforce</span>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <span class="stat-value" data-target="0.35" data-decimals="2">0</span>
+                        <span class="stat-suffix">Cd</span>
+                        <span class="stat-label">Drag Coefficient</span>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <span class="stat-value" data-target="7">0</span>
+                        <span class="stat-suffix"></span>
+                        <span class="stat-label">Active Aero Elements</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: HEART OF THE BEAST                -->
+    <!-- ============================================ -->
+    <section id="engine" class="section engine-section">
+        <div class="engine-bg-pattern"></div>
+        <div class="engine-container">
+            <div class="engine-text-block" id="engine-text">
+                <span class="section-label">03 — POWERTRAIN</span>
+                <h2 class="engine-title">HEART OF<br>THE BEAST</h2>
+                <p class="engine-desc">A naturally aspirated 6.5-liter V12 paired with three electric motors. 1,015 combined horsepower. This isn't evolution — it's revolution, wrapped in carbon fiber and fury.</p>
+                <div class="engine-specs">
+                    <div class="spec-item glass-panel">
+                        <span class="spec-num">6.5L</span>
+                        <span class="spec-label">V12 Engine</span>
+                    </div>
+                    <div class="spec-item glass-panel">
+                        <span class="spec-num">3</span>
+                        <span class="spec-label">Electric Motors</span>
+                    </div>
+                    <div class="spec-item glass-panel">
+                        <span class="spec-num">1,015</span>
+                        <span class="spec-label">Combined HP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="engine-visual" id="engine-visual">
+                <div class="engine-assembly" id="engine-assembly">
+                    <img src="assets/engine-full.png" alt="Lamborghini V12 hybrid powertrain assembled" class="engine-layer engine-layer-full" id="engine-full-img">
+                    <img src="assets/engine-exploded.png" alt="Lamborghini V12 hybrid powertrain exploded view" class="engine-layer engine-layer-exploded" id="engine-exploded-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: PERFORMANCE                       -->
+    <!-- ============================================ -->
+    <section id="performance" class="section performance-section">
+        <div class="perf-bg">
+            <img src="assets/rear-action.png" alt="Lamborghini Revuelto rear view at speed" class="perf-bg-img" id="perf-bg-img">
+            <div class="perf-bg-overlay"></div>
+        </div>
+        <div class="perf-container">
+            <span class="section-label">04 — PERFORMANCE</span>
+            <h2 class="perf-title" id="perf-title">RAW<br>NUMBERS</h2>
+            <div class="perf-charts" id="perf-charts">
+                <div class="chart-row">
+                    <div class="chart-label">HORSEPOWER</div>
+                    <div class="chart-track">
+                        <div class="chart-bar" id="bar-hp" data-value="1015" data-max="1200">
+                            <span class="chart-value">0</span>
+                            <span class="chart-suffix">HP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">TORQUE</div>
+                    <div class="chart-track">
+                        <div class="chart-bar" id="bar-torque" data-value="740" data-max="1000">
+                            <span class="chart-value">0</span>
+                            <span class="chart-suffix">Nm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">0 — 100 KM/H</div>
+                    <div class="chart-track">
+                        <div class="chart-bar chart-bar-inverse" id="bar-accel" data-value="2.5" data-max="5">
+                            <span class="chart-value">0</span>
+                            <span class="chart-suffix">sec</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">TOP SPEED</div>
+                    <div class="chart-track">
+                        <div class="chart-bar" id="bar-speed" data-value="350" data-max="400">
+                            <span class="chart-value">0</span>
+                            <span class="chart-suffix">km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Closing Tagline -->
+        <div class="closing" id="closing">
+            <h2 class="closing-title">
+                <span class="closing-word">THE</span>
+                <span class="closing-word">FUTURE</span>
+                <span class="closing-word accent">IS</span>
+                <span class="closing-word accent">UNTAMED</span>
+            </h2>
+            <div class="closing-line"></div>
+            <p class="closing-sub">LAMBORGHINI REVUELTO</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-content">
+            <span class="footer-brand">AUTOMOBILI LAMBORGHINI</span>
+            <span class="footer-copy">&copy; 2026 — All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <!-- Watermark -->
+    <div class="watermark">Made by Anik Mondal</div>
+
+    <!-- GSAP + ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
